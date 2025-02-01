@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar   </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            text-decoration: none;
+            list-style-type: none;
+            color: white;
+            background-color: black;
+            
+            
+        }
+
+        header{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            align-items: center;
+            
+            padding: 15px 50px;
+        }
+
+        header a{
+            /* background-color: red; */
+           display: flex;
+            align-items: center;
+            font-size: 25px;
+            font-weight: 500;
+          
+
+
+        }
+
+        header a i{
+            margin: 0 10px;
+            font-size: 28px;
+        }
+
+        .nav-bar{
+            display: flex;
+           column-gap: 5rem;
+          
+          
+        }
+
+        .btn{
+            padding: 5px 10px;
+            background-color: red;
+            border-radius: 10px;
+        }
+
+        .btn:hover{
+            background-color: rgb(200, 44, 44);
+        }
+
+   
+        .nav-bar a:hover {
+            border-bottom: 2px solid red;
+            transition: 0.5s;
+            left: 0;
+        }
+
+       
+
+        .nav-bar .active{
+            border-bottom: 2px solid red;
+            width: 100%;
+        }
+
+        .container{
+            width: 100%;
+            min-height: 800px;
+            /* position: relative; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+           
+        }
+
+        section .container .img{
+            position: absolute;
+            z-index: -1;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .para{
+            margin-right: 100px;
+        }
+
+
+        .para h1{
+            font-size: 100px;
+            font-weight: 700;
+
+        }
+
+        .para button{
+            background-color: red;
+            padding: 10px 15px;
+            border-radius: 50px;
+            border: none;
+            margin-top: 20px;
+        }
+
+        .para .play{
+            position: absolute;
+            right: 6rem;
+            bottom: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .para .play .fa-solid{
+            background-color: red;
+            font-size: 2rem;
+            padding: 10px 15px;
+            border-radius: 50%;
+            border: 1px solid rgb(213, 229, 246);
+            transition: 0.5s;
+        
+            
+        }
+
+        .para .play .fa-solid:hover{
+            transform: scale(1.2);
+        }
+
+
+
+      .movies-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+        gap: 10px;
+        margin: 0 10px;
+      }
+
+      .movies h1{
+        font-weight: 900;
+        /* background-color: red; */
+        max-width: 962px;
+        text-transform: uppercase;
+        margin: 10px auto 20px auto;
+        display: flex;
+        justify-content: center;
+        border-bottom: 2px solid rgb(250, 88, 88);
+      }
+        
+      .movies-box .image{
+        gap: 10px;
+        width: 100%;
+        height: 450px;
+        transition: 0.5s;
+        
+      }
+
+      .movies-box .image img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.8);
+        margin-bottom: 10px;
+        
+      }
+
+      .movies-box .image img:hover{
+        transform: translateY(-10px);
+        filter: brightness(1.25);
+        box-shadow: 5px 5px 10px rgb(162, 162, 228);
+      }
+
+      .movies-box h3,h5{
+        text-align: center;
+        margin: 10px 0;
+        text-transform: uppercase;
+      }
+       
+      .coming-movies-container h1{
+        margin-top: 15px;
+      }
+
+      .contact{
+       max-width: 962px;
+       margin-top: 100px;
+       /* background-color: yellow; */
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       margin: auto;
+      }
+
+      .contact h3{
+        font-weight: 800;
+        font-size: 30px;
+        padding: 10px;
+      }
+
+      .contact input{
+        width: 300px;
+        background-color: white;
+        border: none;
+        padding: 5px 10px;
+        margin: 5px 0;
+        outline: none;
+        border-radius: 10px;
+      }
+
+      .contact .btn{
+        background-color: red;
+        padding: 10px 15px;
+        border-radius: 10px;
+        border: none;
+      }
+
+      .contact .btn:hover{
+        cursor: pointer;
+       box-shadow: 5px 5px 10px rgb(201, 201, 248);
+
+      }
+
+      .contact form{
+        background-color: white;
+        padding: 20px;
+        margin: 5px 0;
+        border-radius: 10px;
+      }
+      .footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 50px;
+        margin-left: 50px;
+        margin-right: 50px;
+        padding: 10px;
+       
+         }
+
+      .footer a{
+        font-size: 30px;
+        transition: 0.5s;
+      }
+
+      
+
+      .footer .social .fa-brands{
+        background-color: red;
+        margin: 0 5px;
+        border-radius: 50%;
+        padding: 10px;
+        font-size: 20px;
+        border: 1px solid rgb(213, 229, 246);
+      }
+
+      .footer .fa-brands:hover{
+        transform: scale(1.2);
+        
+      }
+
+      .end-para{
+        font-size: 20px;
+        margin: 0 auto;
+        text-align: center;
+        
+        margin: 10px 0;
+
+      }
+
+      .end-para p{
+        background-color: red;
+        padding: 10px;
+        text-shadow: 3px 3px 10px rgb(8, 8, 8);
+      }
+
+     
+
+      @media (max-width: 1080px){
+        .para h1{
+           font-size: 30px;
+        }
+
+        .para h3{
+           font-size: 15px;
+        }
+
+        .para .play{
+            position: absolute;
+            right: 3rem;
+            bottom: -10%;
+           
+        }
+
+        .para .play .fa-solid{
+            font-size: 1.5rem;
+        }
+
+        
+      }
+
+      @media (max-width: 900px){
+        .nav-bar{
+            display: none;
+        }
+
+        .container img{
+            width: 50%;
+        }
+
+        .container{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .para .play{
+            position: absolute;
+            right: 3rem;
+            bottom: -20%;
+           
+        }
+
+        .para .play .fa-solid{
+            font-size: 1rem;
+        }
+
+
+
+      }
+
+
+
+        @media (max-width: 400px){
+            .container img{
+                width: 60%;
+            }
+
+            .container{
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .para .play{
+                
+                right: -60rem;
+                bottom: -100%;
+            
+            }
+
+            .para .play .fa-solid{
+                font-size: 1rem;
+                padding: 5px 10px;
+               
+            }
+
+            .contact input{
+                width: 200px;
+            }
+
+        .para button{
+        font-size: 10px;
+        padding: 5px 10px;
+
+       }
+
+       .para .play .fa-solid{
+                font-size: 0.5rem;
+                padding: 5px 8px;
+               
+            }
+
+           
+       
+      }
+
+      @media(max-width: 500px){
+       .footer{
+        flex-direction: column;
+       }
+
+       .footer a{
+        font-size: 25px;
+        margin: 10px 0;
+       }
+
+       .para .play{
+            position: absolute;
+            right: 3rem;
+            bottom: -10%;
+           
+        }
+      }
+
+   
+       
+       
+      @media (max-width: 320px){
+       .para button{
+        font-size: 10px;
+        padding: 5px 10px;
+
+       }
+
+       .para .play{
+            position: absolute;
+            right: 1rem;
+            bottom: -13%;
+           
+        }
+
+        
+        .para .play .fa-solid{
+                font-size: 0.5rem;
+                padding: 5px 8px;
+               
+            }
+        
+        header a{
+            font-size: 20px;
+            margin: 0 5px;
+        }
+
+        .contact input{
+            width: 150px;
+         }
+
+        .contact h3{
+            font-size: 20px;
+        }
+
+        
+    
+
+      
+
+      .footer .social .fa-brands{
+       
+        margin: 0 5px;
+        padding: 5px;
+      
+      }
+       
+      }
+
+       
+
+       
+    </style>
+</head>
+<body>
+ 
+        <!-- nav bar  -->
+         <header>
+            <a href="#"><i class="fa-solid fa-clapperboard"></i>CODE LAB</a>
+
+            <!-- menu open  -->
+             <ul class="nav-bar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">Coming</a></li>
+                <li><a href="#">Contact</a></li>
+
+             </ul>
+            <!-- menu close  -->
+
+            <!-- sign in button open -->
+             <a href="#" class="btn">Sing in</a>
+            <!-- sign in button close -->
+         </header>
+
+     <!-- nav bar close  -->
+
+     <!-- cover start  -->
+      <section class="home" id="home">
+        <div class="container">
+            <img src="./html/image/cat.webp" alt="cat">
+            <div class="para">
+                <h3>MARVAL UNIVERSE</h3>
+                <h1>Venon <br> My Univese</h1>
+                <button>Watch Now</button>
+                <a href="#" class="play"><i class="fa-solid fa-play"></i></a>
+            </div>
+        </div>
+      </section>
+     <!-- cover close  -->
+
+     <!-- movies start  -->
+      <div class="movies">
+        <h1>Opening This week</h1>
+
+        <div class="movies-container">
+
+            <!-- movie1  -->
+            <div class="movies-box">
+                <div class="image">
+                    <img src="./html/image/mv1.jpg" alt="">
+                </div>
+                <h3>BOY CALLED CHRISTMAS</h3>
+                <h5>120 mins | Action</h5>
+            </div>
+
+            <!-- movie2  -->
+         <div class="movies-box">
+            <div class="image">
+                <img src="./html/image/mv2.jpg" alt="">
+            </div>
+            <h3>MUFASA</h3>
+            <h5>120 mins | Action</h5>
+        </div>
+
+         <!-- movie3  -->
+         <div class="movies-box">
+            <div class="image">
+                <img src="./html/image/mv3.jpg" alt="">
+            </div>
+            <h3>SNOW WHITE</h3>
+            <h5>120 mins | Action</h5>
+        </div>
+
+         <!-- movie4  -->
+         <div class="movies-box">
+            <div class="image">
+                <img src="./html/image/mv4.jpg" alt="">
+            </div>
+            <h3>DISNEP ENCANTO</h3>
+            <h5>120 mins | Action</h5>
+        </div>
+
+         <!-- movie5  -->
+         <div class="movies-box">
+            <div class="image">
+                <img src="./html/image/mv5.jpg" alt="">
+            </div>
+            <h3>WICKED</h3>
+            <h5>120 mins | Action</h5>
+        </div>
+
+        <!-- movie6  -->
+      <div class="movies-box">
+        <div class="image">
+            <img src="./html/image/mv6.jpg" alt="">
+        </div>
+        <h3>MOANA 2</h3>
+        <h5>120 mins | Action</h5>
+    </div>
+
+            <!-- movie7  -->
+        <div class="movies-box">
+            <div class="image">
+                <img src="./html/image/mv7.jpg" alt="">
+            </div>
+            <h3>GODMOTHERED</h3>
+            <h5>120 mins | Action</h5>
+        </div>
+
+        <!-- movie8  -->
+        <div class="movies-box">
+            <div class="image">
+                <img src="./html/image/mv8.jpg" alt="">
+            </div>
+            <h3>WINTER WONDERLAND</h3>
+            <h5>120 mins | Action</h5>
+        </div>
+
+
+    </div>
+
+    
+    <!-- comming soon start  -->
+     <div class="coming-movies-container">
+       <h1>Coming soon</h1>
+        <div class="movies-container">
+
+            <!-- movie9  -->
+            <div class="movies-box">
+                <div class="image">
+                    <img src="./html/image/mv9.jpg" alt="">
+                </div>
+                <h3>Anora</h3>
+                <h5>120 mins | Action</h5>
+            </div>
+
+             <!-- movie10  -->
+             <div class="movies-box">
+                <div class="image">
+                    <img src="./html/image/mv10.jpg" alt="">
+                </div>
+                <h3>enola holmes</h3>
+                <h5>120 mins | Action</h5>
+            </div>
+
+             <!-- movie11 -->
+             <div class="movies-box">
+                <div class="image">
+                    <img src="./html/image/mv11.jpg" alt="">
+                </div>
+                <h3>dinesp</h3>
+                <h5>120 mins | Action</h5>
+            </div>
+
+             <!-- movie12  -->
+             <div class="movies-box">
+                <div class="image">
+                    <img src="./html/image/mv12.jpg" alt="">
+                </div>
+                <h3>Goofy Movie</h3>
+                <h5>120 mins | Action</h5>
+            </div>
+     </div>
+
+    <!-- comming soon close -->
+
+
+    <!-- contact open -->
+     <div class="contact">
+        <h3>Contact Us With Email</h3>
+        <form action="#">
+            <input type="email" name="email" class="email" placeholder="Enter Email..." required>
+            <button class="btn">Send</button>
+        </form>
+     </div>
+    <!-- contact close -->
+
+       <!-- footer Opening  -->
+       <section class="footer">
+        <a href="#"><i class="fa-solid fa-clapperboard"></i>CODE LAB</a>
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-facebook"></i></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+     </section>
+
+     <!-- end para open  -->
+      <section class="end-para">
+        <p>CODE LAB | We learn, We share, We code. This laboratory is for all coders.</p>
+      </section>
+     <!-- end para close  -->
+    <!-- footer closing  -->
+
+
+      
+    
+
+
+
+      
+
+
+      
+    
+
+ 
+</body>
+</html>

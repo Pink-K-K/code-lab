@@ -1,0 +1,321 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+        body{
+                font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Input types</legend>
+        <form action="#">
+
+            <label for="btn">Input Button</label>
+            <input type="text" id="btn" name="your_btn" value="click me"><br><br> -->
+             <!-- ဒီကောင်က ခလုတ်သပ်သပ်ပဲ -->
+
+            <label for="btn">Button</label>
+            <button>Click me</button><br><br>
+
+            <!-- this is check box -->
+            <label for="skill">Skills</label>
+
+            <input type="checkbox" id="html" name="skill" value="html">
+            <label for="html" >HTML</label>
+
+            <input type="checkbox" id="css" name="skill" value="css">
+            <label for="css">CSS</label>
+             
+            <input type="checkbox" id="javascript" name="skill" value="javascript">
+            <label for="javascript">JAVASCRIPT</label><br><br>
+
+            <!-- this is input type color -->
+             <label for="favcolor">Color</label>
+             <input type="color" id="favcolor" name="favcolor" value="red"><br><br>
+
+             <!-- this is date -->
+              <label for="birthday">Birthday</label>
+              <input type="date" name="birthday" id="birthday"><br><br>
+
+              <!-- datetime-local -->
+               <label for="datetime-local">datetime-local</label>
+               <input type="datetime-local" name="datetime-local" id="datetime-local"><br><br>
+               <!-- အချိန်ပါထည့်ပြချင်ရင်သုံး -->
+
+               <!-- email -->
+               <label for="your_email">Email</label>
+               <input type="email" name="your_email" id="your_email"><br><br>
+
+                <!-- file  -->
+                <label for="your_file">File</label>
+                <input type="file" name="your_file" id="your_file"><br><br>
+
+                <!-- hidden  -->
+                <label for="hidden">First Name</label>
+                <input type="text" name="fname" id="fname">
+                <input type="hidden" name="hidden" id="hidden"><br><br>
+
+                <label for="yourimage">Image</label>
+                <input type="image" name="yourimage" id="yourimage" src="https://img.freepik.com/free-vector/night-landscape-with-lake-mountains-trees-coast-vector-cartoon-illustration-nature-scene-with-coniferous-forest-river-shore-rocks-moon-stars-dark-sky_107791-8253.jpg?t=st=1733157840~exp=1733161440~hmac=57ab8b8c7b0aa56b27633f7e074575b311379ddc4ec2a3d023158683d660332d&w=826" alt="wallpaper" width="100"><br><br>
+
+                <!-- month  -->
+                 <label for="month">Month</label>
+                 <input type="month" name="month" id="month"><br><br>
+
+
+                <!-- number  -->
+                 <label for="number">Number</label>
+                 <input type="number" name="number" id="number"><br><br>
+
+                 <!-- password  -->
+                 <label for="password">Password</label>
+                 <input type="password" name="password" id="password"><br><br>
+
+                 <!-- radio  -->
+                  <label for="female">Gender:</label>
+
+                  <input type="radio" name="gender" id="female" value="male-gender">
+                  <label for="male">Male</label>
+
+                  <input type="radio" name="gender" id="male" value="female-gender">
+                  <label for="female">Female</label><br><br>
+
+                  <!-- range  -->
+                  <label for="range">Range</label>
+                  <input type="range" name="vol" id="vol" min="0" max="5"><br><br>
+
+                  <!-- reset  -->
+                  <label for="reset">Reset</label>
+                  <input type="reset" name="reset" id="reset"><br><br>
+                    <!-- formထဲမှာရေးထားသမျှဖျက်ချင်ရင် -->
+
+                <!-- search  -->
+                <label for="gsearch">Google Search</label>
+                <input type="search" name="gsearch" id="gsearch"><br><br>
+                    
+                <!-- tel  -->
+                <label for="phone">Enter a phone number</label>
+                <input type="tel" name="phone" id="phone" placeholder=""><br><br>
+
+                <!-- text  -->
+                <label for="text">Text</label>
+                <input type="text" name="text" id="text"><br><br>                 
+
+                <!-- time  -->
+                <label for="time">Time</label>
+                <input type="time" name="time" id="time"><br><br>
+
+                <!-- url  -->
+                <label for="url">URL</label>
+                <input type="url" name="url" id="url"><br><br>
+
+                <!-- week  -->
+                <label for="week">Week</label>
+                <input type="week" name="week" id="week"><br><br>
+
+                <!-- select  -->
+                 <label for="">Nationality</label>
+                 <select name="Nationality" id="" size="2">
+                    <option value="mm">Myanmar</option>
+                    <option value="thai">Thailand</option>
+                    <option value="china">China</option>
+                 </select><br><br>
+
+                 <!-- textarea  -->
+                  <label for="">Address</label>
+                  <textarea name="" id=""></textarea><br><br>
+
+                  <!-- datalist  -->
+
+                   
+
+
+               <form action="/action_page.php">
+                <input list="browsers" name="browser">
+                <datalist id="browsers">
+                  <option value="Edge">
+                  <option value="Firefox">
+                  <option value="Chrome">
+                  <option value="Opera">
+                  <option value="Safari">
+                </datalist>
+                <input type="submit"><br><br>
+
+                <!-- optgroup  -->
+                 <label for="">Optgroup</label>
+                 <select name="" id="">
+                    <optgroup label="fruits">
+                        <option value="a">apple</option>
+                        <option value="b">banana</option>
+                        <option value="s">strawberry</option>
+                    </optgroup>
+                    <optgroup label="sports">
+                        <option value="f">football</option>
+                        <option value="s">swimming</option>
+                        <option value="g">golf</option>
+                    </optgroup>
+                 </select><br><br>
+
+
+
+                 <img width="100" src="../html/image/img/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAyL3Jhd3BpeGVsX29mZmljZV8zN19hX21pbmltYWxfYW5kX2xlc3NfZGV0YWlsX2lsbHVzdHJhdGlvbl9vZl9jYV9jOGZmMjUyYy0wNWU2LTRmNzAtYTY4My1lOWUyMzRkOGE0NDBfMS5qcGc.webp" alt="">
+
+                 <br><br>
+
+                 <h1>ul & ol</h1>
+                 <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                 </ul>
+                 <ol>
+                    <li>a</li>
+                    <li>b</li>
+                    <li>c</li>
+                 </ol>
+
+                <hr>
+                <h1>Table</h1>
+                <table border="5">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                    </tr>
+
+                    <tr>
+                        <td>1</td>
+                        <td>codelab</td>
+                        <td>codelab@gmail.com</td>
+                    </tr>
+
+                    
+                    <tr>
+                        <td>2</td>
+                        <td>kyaw kyaw</td>
+                        <td>kyawkyaw@gmail.com</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>tun tun</td>
+                        <td>tuntun@gmail.com</td>
+                    </tr>
+                </table>
+
+                <hr>
+
+                <table border="5">
+                    <tr>
+                        <th colspan="3">My information</th>
+                       
+                    </tr>
+
+                    <tr>
+                        <td>1</td>
+                        
+                        <td colspan="2">codelab@gmail.com</td>
+                    </tr>
+
+                    
+                    <tr>
+                        <td>2</td>
+                        <td rowspan="2">kyaw kyaw</td>
+                        <td>kyawkyaw@gmail.com</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                       
+                        <td>tuntun@gmail.com</td>
+                    </tr>
+                </table>
+                <hr>
+
+                <h1>Subscript</h1>
+                <h2>H <sub>2</sub>O <sub>2</sub></h2>
+
+                <h1>Superscript</h1>
+                <h2>X <sup>2</sup></h2>
+
+                <h1>delete tag</h1>
+                <h2><del>$500</del>$300</h2>
+
+                <hr>
+
+                <a href="https://www.youtube.com/watch?v=4JPVG5hus5U" target="_blank">Youtube</a>
+
+                <a href="./page4.html#three">Page4</a><br>
+
+                <iframe src=".//page4.html" frameborder="0"></iframe><br>
+
+                <iframe src="https://www.amazon.com/" frameborder="0"></iframe><br>
+
+                <iframe src="https://maps.app.goo.gl/GmCte39KryATaYKVA" frameborder="0"></iframe>
+
+                <hr>
+                <details>
+                    <summary>this is paragraph</summary>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eum deleniti tempore illum, velit atque minus, aliquam dolor voluptatem consequatur magnam deserunt pariatur quis nemo in mollitia culpa voluptates ducimus?
+                </details>
+
+
+
+
+                 
+
+
+                
+
+
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             
+             
+
+
+
+
+
+
+        </form>
+    </fieldset>
+</body>
+</html> 

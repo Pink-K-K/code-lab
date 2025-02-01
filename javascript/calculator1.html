@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator One</title>
+</head>
+<body>
+    <h3>Calculator</h3><hr>
+
+    <form action="">
+        Num1 : <input type="text" id="num1" placeholder="Enter first number...." required><br><br>
+        Num2 : <input type="text" id="num2" placeholder="Enter first number...." required><br><br>
+        Operator :
+        <select name="" id="operator">
+            <option value="+">Sum</option>
+            <option value="-">minus</option>
+            <option value="*">multiple</option>
+            <option value="/">division</option>
+        </select><br><br>
+
+        <button type="button" id="calculate_btn">Calculate</button>
+        <button type="reset">Reset</button>
+
+        <h4 id="ans">Ans :</h4>
+
+
+    </form>
+
+
+    <script>
+        let num1 = document.getElementById("num1");
+        let num2 = document.getElementById("num2");
+        let operator = document.getElementById("operator");
+        let calculateBtn = document.getElementById("calculate_btn");
+        let ans = document.getElementById("ans");
+        let clearBtn = document.getElementById("clear_btn");
+
+        let result;
+       if(num1.value != "" && num2.value != ""){
+        calculateBtn.addEventListener('click',function(){
+            // console.log(num1.value ,num2.value , operator.value);
+
+            // console.log(typeof num1.value , typeof num2.value);
+            //string to number
+            //first way
+            // let firstNumber = parseInt(num1.value);
+            // let secondNumber = parseInt(num2.value);
+            // console.log(typeof firstNumber,typeof secondNumber);
+
+            //second way
+            let firstNumber = num1.value * 1;
+            let secondNumber = num2.value * 1;
+            // console.log(typeof firstNumber,typeof secondNumber);
+
+
+
+            switch(operator.value){
+                case "+" : result = firstNumber + secondNumber ;break;
+                case "-" : result = firstNumber - secondNumber ;break;
+                case "*" : result = firstNumber * secondNumber ;break;
+                case "/" : result = firstNumber / secondNumber ;break;
+                default : result = "<p style='color: red'>Error</p>";break;
+            }
+
+            ans.innerHTML=`Ans : ${result}`;
+
+            num1.value = "";
+            num2.value = "";
+
+        });
+
+       }else{
+        ans.innerHTML= "<p style='color: red'>You must fill 2 input box.</p>";
+       }
+       
+
+
+       //if else အုပ်လိုက်တော့ အလုပ်မလုပ်ဘူးနော် ဖြူတ်လိုက်ရင်ရတယ်
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>DOM</h1>
+    Email : <input type="email" name="" id="email"><br>
+    Password : <input type="password" name="
+    " id="password"><br>
+
+    <button id="login_btn">Log In</button>
+    <button id="btn_clear" onclick="clearfun()">Clear</button>
+
+
+
+    <script>
+        let email = document.getElementById("email");
+        let password = document.getElementById("password");
+        let loginBtn = document.getElementById("login_btn");
+        let loginClear = document.getElementById("btn_clear");
+
+      loginBtn.addEventListener('click',function(){
+            email = email.value;
+            password = password.value;
+
+            console.log(email , password);
+      });
+
+      // loginClear.addEventListener('click', function(){
+      //   email.value = "";
+      //   password.value = "";
+
+      //   console.log(email , password)
+      // })
+
+      function clearfun(){
+        email.value = "";
+        password.value = "";
+      }
+
+
+
+    </script>
+</body>
+</html>

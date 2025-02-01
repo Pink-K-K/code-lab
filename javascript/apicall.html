@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        .productTable th,td{
+            border: 1px solid rgb(53, 53, 53);
+            padding: 10px;
+        }
+
+        .productTable{
+            margin: 0 auto;
+            border-collapse: collapse;
+            margin-top: 100px;
+            width: 60%;
+        }
+
+        .productTable th{
+            background-color: rgb(218, 238, 238);
+        }
+
+        .productTable tr:nth-child(even){
+            background-color: rgb(241, 241, 182);
+        }
+
+        .productTable tr:hover{
+            background-color: rgb(240, 240, 12);
+        }
+
+        .btn{
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px;
+            margin-left: 600px;
+            margin-top: 100px;
+        }
+
+        .searchbox{
+            width: 200px;
+            padding: 15px 30px;
+            border-radius: 20px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn" onclick="callApi()">Get Product List</button>
+
+    <input type="text" onkeyup="search()" name="" id="searchkey" class="searchbox" placeholder="Enter Search">
+
+    <table class="productTable" id="table">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Photo</th>
+            <th>Price</th>
+            <th>View Count</th>
+            <th>Rating</th>
+        </tr>
+
+       
+    </table>
+
+
+
+
+
+
+
+
+
+    <script>
+        let temp = "";
+        let table = document.getElementById("table");
+        //https://fakestoreapi.com/products
+
+//         let dataFetching = async () =>{
+//                 let response = await fetch("https://fakestoreapi.com/products ");
+//                 var products = await response.json();
+           
+//                 products.forEach(item => {
+//                     temp += ` 
+//                         <tr>
+//                             <td>${item.id}</td>
+//                             <td>${item.title}</td>
+//                             <td>${item.description}</td>
+//                             <td><img src="${item.image}" width="50px"> </td>
+//                             <td>${item.price}</td>
+//                             <th>${item.rating.count} viewer</td>
+//                             <td>${item.rating.rate} stars</td>
+//                         </tr>
+// `
+//                 });
+            
+//                 console.log(products);
+//                 // console.log(temp);
+//                 table.innerHTML = `
+//                     <tr>
+//                         <th>ID</th>
+//                         <th>Name</th>
+//                         <th>Description</th>
+//                         <th>Photo</th>
+//                         <th>Price</th>
+//                         <th>View Count</th>
+//                         <th>Rating</th>
+//                     </tr>` + temp;
+
+
+          
+//         }
+
+       
+
+        function callApi(){
+            fetch("https://fakestoreapi.com/products")
+            .then( (res)=> res.json())
+            .then( (products)=> {
+                products.forEach(item => {
+                    temp += ` 
+                        <tr>
+                            <td>${item.id}</td>
+                            <td>${item.title}</td>
+                            <td>${item.description}</td>
+                            <td><img src="${item.image}" width="50px"> </td>
+                            <td>${item.price}</td>
+                            <th>${item.rating.count} viewer</td>
+                            <td>${item.rating.rate} stars</td>
+                        </tr>
+`
+                });
+            
+                console.log(products);
+                // console.log(temp);
+                table.innerHTML = `
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Photo</th>
+                        <th>Price</th>
+                        <th>View Count</th>
+                        <th>Rating</th>
+                    </tr>` + temp;
+            })
+        }
+
+        function search(){
+            let input = document.getElementById("searchkey").value.toLowerCase();
+            let table = document.getElementById("table");
+            let tr = table.getElementsByTagName("tr");
+            console.log(tr)
+            
+
+        }
+
+    </script>
+</body>
+</html>

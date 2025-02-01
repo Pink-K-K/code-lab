@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peseudo Class</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: aquamarine;
+            height: 1000vh;
+        }
+        .content{
+            width: 400px;
+            background-color: white;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            margin-top: 100px;
+            text-align: justify;
+            border-radius: 20px;
+            transition: 0.5s;
+        }
+
+        .title{
+            font-size: 25px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bolder;
+        }
+
+        .btn{
+            background-color: aqua;
+            padding: 5px;
+            width: 100%;
+            margin-top: 20px;
+            color: rgb(235, 60, 8);
+            border-radius: 20px;
+            transition: 1s;
+            font-size: 20px;
+
+        }
+
+        .content:hover{
+            background-color: black;
+            color: white;
+        }
+
+        
+        .content:active{
+            background-color: rgb(243, 14, 14);
+            color: white;
+        }
+
+        
+        .btn:hover{
+            background-color: rgb(231, 9, 9);
+            color: white;
+        }
+        
+        .text{
+
+            text-align: center;
+        }
+
+        .pf{
+            width: 200px;
+            border: none;
+            margin-top: 25px;
+            border-radius: 20px;
+            padding: 5px;
+        }
+
+        .pf:focus{
+            background-color: blue;
+        }
+
+        .mypara{
+            text-align: center;
+            margin-top: 20px;
+        }
+        .mypara::before{
+            content: "This is before";
+            font-size: 25px;
+            color: red;
+        }
+
+        .mypara::after{
+            content: "This is after";
+            font-size: 15px;
+            color: rgb(69, 19, 249);
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="title">Hello Everyone!</div>
+        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ipsa molestiae ea illum quod ad earum tempore soluta. Consectetur tempore corrupti facere eos, laudantium quasi quod qui aut voluptate odio iste animi nobis exercitationem nam eaque perspiciatis reprehenderit recusandae adipisci laboriosam fuga. Odio repellat quas veniam fuga. Fugiat, fuga et quos, soluta sapiente assumenda, ad quas blanditiis consequuntur vitae nulla perferendis accusantium doloremque dicta eligendi? Incidunt ipsa ullam delectus distinctio ad perspiciatis culpa, nemo, unde voluptatum reiciendis explicabo, earum illo aliquam magnam sint doloremque optio numquam. Quis voluptatum illum vero! Optio obcaecati commodi sapiente aliquid illo quos ad repellat suscipit!</p>
+        <button class="btn">Register</button>
+    </div>
+
+    <div class="text">
+        <input type="text" name="pf" id="pf" class="pf">
+    </div>
+    <hr>
+    <div class="mypara">
+        <span>Hello World</span>
+    </div>
+</body>
+</html>

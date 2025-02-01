@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Projecct</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            
+        }
+
+        body{
+            background-color: black;
+        }
+        #calculator{
+            width: 290px;
+            background-color: white;
+            margin: 0 auto;
+            margin-top: 100px;
+            position: relative;
+           padding: 10px;
+           max-width: 320px;
+           border-radius: 7px;
+        }
+
+        #result{
+            width: 100%;
+            padding: 15px 0;
+            text-align: right;
+            font-size: 3rem;
+        }
+
+        .ac_button{
+            background-color: orange;
+        }
+
+        button{
+            width: 60px;
+            height: 60px;
+            outline: none;
+            margin: 4px 2px;
+            border: none;
+            background-color: wheat;
+            border-radius: 7px;
+            font-size: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <div id="result">0</div>
+        <button class="ac_button" onclick="clearForm()"> AC</button>
+        <button onclick="getData(this)">7</button>
+        <button onclick="getData(this)">8</button>
+        <button onclick="getData(this)">9</button>
+        <button onclick="getData(this)">/</button>
+        <button onclick="getData(this)">4</button>
+        <button onclick="getData(this)">5</button>
+        <button onclick="getData(this)">6</button>
+        <button onclick="getData(this)">*</button>
+        <button onclick="getData(this)">1</button>
+        <button onclick="getData(this)">2</button>
+        <button onclick="getData(this)">3</button>
+        <button onclick="getData(this)">-</button>
+        <button onclick="getData(this)">0</button>
+        <button onclick="getData(this)">.</button>
+        <button onclick="getData(this)">=</button>
+        <button onclick="getData(this)">+</button>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

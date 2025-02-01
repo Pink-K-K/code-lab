@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Album</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG+Guides&display=swap');
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        body{
+            display: flex;
+            justify-content: center;
+            background-color: d35400 ;
+            height: 1000vh;
+            background-color: #685141;
+            font-family: "Playwrite BE VLG Guides", cursive;
+            font-weight: 400;
+            font-style: normal;
+            text-align: justify;
+            color: gold;
+            
+
+        }
+        .container{
+            margin: 10px;
+            padding: 10px;
+
+            width: 80%;
+            
+            
+            
+            
+        }
+        
+        .top{
+            display: flex;
+           
+          
+        }
+        
+        .tleft{
+            width: 50%;
+            /* background-color: #ed660c; */
+            padding: 5px;
+            margin: 5px;
+            /* border: 3px solid black; */
+           column-span: 200px 3;
+           column-gap: 50px;
+           
+
+        }
+
+        .tright{
+            width: 50%;
+            background-color: #685141;
+            padding: 10px;
+            margin: 10px;
+            display: flex;
+            justify-content: space-between;
+            /* border: 3px solid black; */
+
+
+        }
+
+       
+
+        
+        .middle{
+            display: flex;
+            justify-content: space-evenly;
+            column-gap: 50px;
+            columns: 200px 4;
+        }
+        
+        .third, .fourth, .fifth, .sixth{
+            /* background-color: red; */
+            /* border: 3px solid black; */
+        }
+        
+        .first p{
+            margin: 5px;
+        }
+        
+        .tright p{
+            padding: 10px;
+        }
+        
+        .bottom p{
+            width: 100%;
+            font-size: 40px;
+            padding: 10px;
+            margin: 10px;
+            background-color: #342904;
+            color: gold;
+            text-align: center;
+        }
+        
+        img{
+            width: 100px;
+            filter: blur(0.8px);
+            transition: 0.5s;
+       
+        }
+
+        img:hover{
+            filter: blur(0px);
+            border: 8px solid rgb(63, 27, 2);
+            transform: scale(2) skew(5deg);
+            filter: brightness(1.5) drop-shadow(16px 16px 20px gold);
+            box-shadow: 20px 20px 30px rgb(149, 235, 136);
+       
+        }
+
+        p:hover{
+            color: rgb(93, 246, 95);
+            text-shadow: 20px 20px 100px rgb(230, 150, 13);
+       
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="top">
+            <div class="tleft">
+                <div class="first">
+                    <img src="./image/p1.jpg" alt="">
+                    <img src="./image/p2.jpg" alt="">
+                    <img src="./image/p3.jpg" alt="">
+                    <p>"We don't want a big wedding, and we've already made the arrangements". 
+                    </p>
+                  
+                    
+                </div>
+                <div class="second">
+                    <img src="./image/p4.jpg" alt="" >
+                    <img src="./image/p5.jpg" alt="">
+                    <img src="./image/p6.jpg" alt="">
+                </div>
+            </div>
+    
+            <div class="tright">
+                <img src="./image/p6.jpg" alt="" >
+                <p>You are truly one of a kind, and I can't imagine my life without you. As we stand here today, surrounded by our loved ones, I am filled with joy and gratitude that we have found each other out of the billions of people in the world. I truly believe, you are my person.</p>
+                <img src="./image/p8.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="middle">
+            <div class="third">
+                <img src="./image/p1.jpg" alt="">
+                <img src="./image/p2.jpg" alt="">
+                <img src="./image/p3.jpg" alt="">
+                <img src="./image/p4.jpg" alt="">
+            </div>
+
+            <div class="fourth">
+                <img src="./image/p1.jpg" alt="">
+                <img src="./image/p2.jpg" alt="">
+                <img src="./image/p3.jpg" alt="">
+                <img src="./image/p4.jpg" alt="">
+            </div>
+
+            <div class="fifth">
+                <img src="./image/p1.jpg" alt="">
+                <img src="./image/p2.jpg" alt="">
+                <img src="./image/p3.jpg" alt="">
+                <img src="./image/p4.jpg" alt="">
+            </div>
+
+            <div class="sixth">
+                <img src="./image/p1.jpg" alt="">
+                <img src="./image/p2.jpg" alt="">
+                <img src="./image/p3.jpg" alt="">
+                <img src="./image/p4.jpg" alt="">
+            </div>
+
+            
+        </div>
+
+        <div class="bottom">
+            <p>&hearts;Together Wedding Photos&hearts;</p>
+        </div>
+    </div>
+</body>
+</html>

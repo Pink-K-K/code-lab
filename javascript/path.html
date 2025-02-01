@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Day 4</title>
+</head>
+<body>
+    <h1>Homework</h1>
+    <script>
+       
+        let myshop = {
+            food: {
+                drinking: ['cola','sprit',{ juice: {orange: 1000, strawberry: 1500}}, 'water'],
+                bread: ['whitebread','baguette','grissini','challah'],
+                fruit: ['apple','orange','mango'],
+                alcohol: ['grand',{spy: {red: 1000, blue: 2000}},'palace']},
+
+            total : function(){
+                let drinking = this.drinking;
+                console.log(drinking);
+            }
+           
+            }
+            myshop();
+            console.log("hello");
+    </script>
+</body>
+</html>
